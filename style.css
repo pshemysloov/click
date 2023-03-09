@@ -1,0 +1,30 @@
+body{
+    background-color: grey;
+}
+#wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-flow: column;
+}
+#box{
+    background-color: wheat;
+    display: flex;
+}
+.point{
+    position: relative;
+    border-radius: 50%;
+    background-color: black;
+}
+#score{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    font-size: 30px;
+    border: 2px solid black;
+    background-color: white;
+}
