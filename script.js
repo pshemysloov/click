@@ -17,8 +17,6 @@ let SCORE = 0;
 score.innerHTML = SCORE;
 
 function click_good(){
-    window.event.stopPropagation();
-
     let top = Math.floor(Math.random() * HEIGHT);
     let left = Math.floor(Math.random() * WIDTH);
     circle.style.top = `${top}px`;
@@ -27,15 +25,16 @@ function click_good(){
     SCORE += 1;
     score.innerHTML = SCORE;
 
+    event.stopPropagation();
 }
 function click_bad(){
-    window.event.stopPropagation();
-
     hearts = document.getElementsByClassName("heart")
     hearts[0].remove()
     if(hearts.length == 0){
         circle.removeAttribute("onclick");
     }
+
+    event.stopPropagation();
 }
 
 click_good();
