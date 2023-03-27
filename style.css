@@ -1,3 +1,6 @@
+:root{
+    cursor: crosshair;
+}
 body{
     background-color: grey;
     user-select: none;
@@ -17,6 +20,7 @@ body{
 #box{
     background-color: wheat;
     display: flex;
+    box-sizing: border-box;
     border: 2px dashed black;
 }
 .circle{
@@ -34,36 +38,54 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    cursor: pointer;
 }
-#score{
-    width: 75px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: green;
-    float: right;
-}
-#start_screen{
+#start-screen{
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#start_button{
-
+#topbar{
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 15px 200px 15px 90px;
+    grid-template-rows: 100%;
 }
 #lives{
     height: 100%;
-    width: auto;
-    float: left;
+    width: 100%;
+    grid-column: 1;
 }
-#topbar{
-    background-color: white;
+#timer-bar-container{
+    width: 200px;
+    height: 20px;
+    display: flex;
+    grid-column: 3;
+    border-radius: 0;
+    background-color: grey;
+    border-radius: 5px;
 }
-#end_screen{
+#timer-bar{
+    height: 100%;
+    background-color: black;
+    border-radius: 5px;
+}
+#score{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: green;
+    grid-column: 5;
+}
+#end-screen{
     width: 100%;
     height: 100%;
     display: flex;
@@ -71,7 +93,7 @@ body{
     justify-content: center;
     flex-direction: column;
 }
-#end_message{
+#end-message{
     width: auto;
     height: 100px;
     display: flex;
@@ -80,7 +102,7 @@ body{
     font-size: 4rem;
     color: black;
 }
-#end_score{
+#end-score{
     width: auto;
     height: 100px;
     display: flex;
@@ -88,7 +110,4 @@ body{
     justify-content: center;
     font-size: 3rem;
     color: black;
-}
-#end_button{
-
 }
